@@ -40,9 +40,9 @@ y=y_lr
 
 # PREVISÕES - PROBABILIDADES
 
-col1.image('imagens/Logo PNG.png')
-pais_origem=col1.selectbox('País de Origem',paises_origem)
-idade=col1.select_slider('Idade',list(range(12,40)))
+st.image('imagens/Logo PNG.png')
+pais_origem=st.selectbox('País de Origem',paises_origem)
+idade=st.select_slider('Idade',list(range(12,40)))
 
 df_sm=pd.DataFrame({i:[0] for i in df.columns[:27]})
 df_sm.loc[0,'Idade']=idade
@@ -81,16 +81,16 @@ df_map['Size']=df_map['Size']*3500
 
 maior_vm_pais=df_bar_lr.sort_values(by='VM Previsto',ascending=False).index[0]
 
-col1.header('VALOR DE MERCADO MUNDIAL')
-col1.metric('Maior Valor de Mercado',
+st.header('VALOR DE MERCADO MUNDIAL')
+st.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
-col1.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
+st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
 # GRÁFICOS
 
-col1.subheader('Valor de Mercado Previsto - Em € Milhões')
-col1.bar_chart(df_bar_lr)
+st.subheader('Valor de Mercado Previsto - Em € Milhões')
+st.bar_chart(df_bar_lr)
 
-col1.subheader('Probabilidade Venda / País (%)')
-col1.bar_chart(df_bar_sm)
+st.subheader('Probabilidade Venda / País (%)')
+st.bar_chart(df_bar_sm)
