@@ -22,7 +22,6 @@ paises_destino=[i.replace('Destino_','') for i in df.columns[21:27]]
 x_sm=df[df.columns[:21]]
 y_sm=df[['Classe País']]
 x_lr=df[df.columns[:27]]
-x_lr.info()
 y_lr=df[['Ln VM']]
 
 x_train,x_test,y_train,y_test=train_test_split(x_lr,y_lr,test_size=0.3)
