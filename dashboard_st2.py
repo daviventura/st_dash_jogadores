@@ -42,7 +42,7 @@ y=y_lr
 
 col1.image('imagens/Logo PNG.png')
 pais_origem=col1.selectbox('País de Origem',paises_origem)
-idade=col2.select_slider('Idade',list(range(12,40)))
+idade=col1.select_slider('Idade',list(range(12,40)))
 
 df_sm=pd.DataFrame({i:[0] for i in df.columns[:27]})
 df_sm.loc[0,'Idade']=idade
