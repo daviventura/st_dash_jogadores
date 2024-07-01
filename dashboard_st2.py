@@ -41,7 +41,7 @@ y=y_lr
 
 # PREVISÕES - PROBABILIDADES
 
-st.sidebar.image('Logo PNG.png')
+st.sidebar.image('imagens/Logo PNG.png')
 pais_origem=st.sidebar.selectbox('País de Origem',paises_origem)
 idade=st.sidebar.select_slider('Idade',list(range(12,40)))
 
