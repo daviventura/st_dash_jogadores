@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
-from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import train_test_split
 
 st.set_page_config(
