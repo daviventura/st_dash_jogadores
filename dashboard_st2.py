@@ -92,10 +92,10 @@ col2_2.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_cont
 
 # GRÁFICOS
 
-with st.container(height=400,border=True):
+with col3_3.container(height=400,border=True):
 
-    col3_3.subheader('Valor de Mercado Previsto - Em € Milhões')
-    col3_3.bar_chart(df_bar_lr)
+    st.subheader('Valor de Mercado Previsto - Em € Milhões')
+    st.bar_chart(df_bar_lr)
 
-    col3_3.subheader('Probabilidade Venda / País (%)')
-    col3_3.bar_chart(df_bar_sm)
+    st.subheader('Probabilidade Venda / País (%)')
+    st.bar_chart(df_bar_sm)
