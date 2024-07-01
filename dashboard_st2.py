@@ -10,7 +10,7 @@ st.set_page_config(
     page_title='Mercado Jogadores'
 )
 
-col1_1,col2_2,col3_3=st.columns([0.15,0.55,0.30])
+col1_1,col2_2,col3_3=st.columns([0.12,0.55,0.30])
 col1,col2=st.columns([0.6,0.4])
 
 df=pd.read_excel('datasets/dados_inputs.xlsx')
