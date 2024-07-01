@@ -10,6 +10,7 @@ st.set_page_config(
     page_title='Mercado Jogadores'
 )
 
+col1_1,col2_2=st.columns([0.3,0.7])
 col1,col2=st.columns([0.6,0.4])
 
 df=pd.read_excel('datasets/dados_inputs.xlsx')
@@ -40,9 +41,10 @@ y=y_lr
 
 # PREVISÕES - PROBABILIDADES
 
-st.image('imagens/Logo PNG.png')
-pais_origem=st.selectbox('País de Origem',paises_origem)
-idade=st.select_slider('Idade',list(range(12,40)))
+with st.container():
+    col1_1.image('imagens/Logo PNG.png')
+    pais_origem=col2_2.selectbox('País de Origem',paises_origem)
+    idade=col2_2.select_slider('Idade',list(range(12,40)))
 
 df_sm=pd.DataFrame({i:[0] for i in df.columns[:27]})
 df_sm.loc[0,'Idade']=idade
