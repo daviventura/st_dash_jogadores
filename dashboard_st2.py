@@ -84,7 +84,9 @@ maior_vm_pais=df_bar_lr.sort_values(by='VM Previsto',ascending=False).index[0]
 st.header('VALOR DE MERCADO MUNDIAL')
 st.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
-st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
+
+with st.container(height=100):
+    st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
 # GRÁFICOS
