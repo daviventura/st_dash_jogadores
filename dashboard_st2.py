@@ -39,8 +39,6 @@ lr.fit(x_lr,y_lr)
 x=lr.predict(x_lr)
 y=y_lr
 
-plt.scatter(x,y)
-
 # PREVISÕES - PROBABILIDADES
 
 st.sidebar.image('Logo PNG.png')
