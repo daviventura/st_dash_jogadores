@@ -70,11 +70,11 @@ df_bar_lr=pd.DataFrame({'VM Previsto':vm_previsto},index=paises_destino)
 
 # GRÁFICOS
 
-col2.subheader('Valor de Mercado Previsto - Em € Milhões')
-col2.bar_chart(df_bar_lr)
+col1.subheader('Valor de Mercado Previsto - Em € Milhões')
+col1.bar_chart(df_bar_lr)
 
-col2.subheader('Probabilidade Venda / País (%)')
-col2.bar_chart(df_bar_sm)
+col1.subheader('Probabilidade Venda / País (%)')
+col1.bar_chart(df_bar_sm)
 
 # MAPA
 
