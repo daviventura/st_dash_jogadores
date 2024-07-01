@@ -42,7 +42,7 @@ y=y_lr
 # PREVISÕES - PROBABILIDADES
 
 with col1_1.container():
-    st.image('imagens/Logo PNG.png',width=250)
+    st.image('imagens/Logo PNG.png',width=200)
     pais_origem=st.selectbox('País de Origem',paises_origem)
     idade=st.select_slider('Idade',list(range(12,40)))
 
@@ -88,7 +88,7 @@ col2_2.header('VALOR DE MERCADO MUNDIAL')
 col2_2.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 
-with col2_2.container(height=300):
+with col2_2.container(height=300,border=False):
     st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
