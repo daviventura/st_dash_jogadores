@@ -10,7 +10,7 @@ st.set_page_config(
     page_title='Mercado Jogadores'
 )
 
-col1_1,col2_2=st.columns([0.3,0.7])
+col1_1,col2_2=st.columns([0.2,0.8])
 col1,col2=st.columns([0.6,0.4])
 
 df=pd.read_excel('datasets/dados_inputs.xlsx')
@@ -43,8 +43,8 @@ y=y_lr
 
 with st.container(height=200,border=True):
     col1_1.image('imagens/Logo PNG.png',width=250)
-    pais_origem=col2_2.selectbox('País de Origem',paises_origem)
-    idade=col2_2.select_slider('Idade',list(range(12,40)))
+    pais_origem=col1_1.selectbox('País de Origem',paises_origem)
+    idade=col1_1.select_slider('Idade',list(range(12,40)))
 
 df_sm=pd.DataFrame({i:[0] for i in df.columns[:27]})
 df_sm.loc[0,'Idade']=idade
