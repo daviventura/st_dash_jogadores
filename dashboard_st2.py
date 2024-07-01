@@ -86,8 +86,8 @@ col2_2.header('VALOR DE MERCADO MUNDIAL')
 col2_2.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 
-with col2_2.container(height=300,border=False):
-    col2_2.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
+
+col2_2.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
 # GRÁFICOS
