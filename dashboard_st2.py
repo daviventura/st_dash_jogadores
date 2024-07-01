@@ -83,13 +83,12 @@ df_map['Size']=df_map['Size']*3500
 
 maior_vm_pais=df_bar_lr.sort_values(by='VM Previsto',ascending=False).index[0]
 
-with col2_2.container(height=400):
 
-    st.header('VALOR DE MERCADO MUNDIAL')
-    st.metric('Maior Valor de Mercado',
-                value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
+col2_2.header('VALOR DE MERCADO MUNDIAL')
+col2_2.metric('Maior Valor de Mercado',
+            value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 
-
+with col2_2.container(height=300):
     st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
