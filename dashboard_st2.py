@@ -41,7 +41,7 @@ y=y_lr
 
 # PREVISÕES - PROBABILIDADES
 
-with st.container(height=200):
+with st.container():
     col1_1.image('imagens/Logo PNG.png')
     pais_origem=col2_2.selectbox('País de Origem',paises_origem)
     idade=col2_2.select_slider('Idade',list(range(12,40)))
