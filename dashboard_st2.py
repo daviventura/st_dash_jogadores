@@ -41,9 +41,10 @@ y=y_lr
 
 # PREVISÕES - PROBABILIDADES
 
-col1_1.image('imagens/Logo PNG.png',width=250)
-pais_origem=col1_1.selectbox('País de Origem',paises_origem)
-idade=col1_1.select_slider('Idade',list(range(12,40)))
+with col1_1.container():
+    st.image('imagens/Logo PNG.png',width=250)
+    pais_origem=st.selectbox('País de Origem',paises_origem)
+    idade=st.select_slider('Idade',list(range(12,40)))
 
 df_sm=pd.DataFrame({i:[0] for i in df.columns[:27]})
 df_sm.loc[0,'Idade']=idade
@@ -82,12 +83,14 @@ df_map['Size']=df_map['Size']*3500
 
 maior_vm_pais=df_bar_lr.sort_values(by='VM Previsto',ascending=False).index[0]
 
-col2_2.header('VALOR DE MERCADO MUNDIAL')
-col2_2.metric('Maior Valor de Mercado',
-            value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
+with col2_2.container(height=400):
+
+    st.header('VALOR DE MERCADO MUNDIAL')
+    st.metric('Maior Valor de Mercado',
+                value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 
 
-col2_2.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
+    st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
 # GRÁFICOS
