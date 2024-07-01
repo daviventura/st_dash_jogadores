@@ -89,13 +89,17 @@ col2_2.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 
 with col2_2.container(height=300,border=False):
-    st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
+    st.map(df_map,latitude='Latitude',
+           longitude='Longitude',
+           size='Size',
+           use_container_width=False,
+           height=300)
 
 
 # GRÁFICOS
 
 
-col3_3.markdown('Valor de Mercado Prev. - Em € Milhões')
+col3_3.markdown('Valor de Mercado Previsto - Em € Milhões')
 col3_3.bar_chart(df_bar_lr,height=170)
 
 col3_3.markdown('Probabilidade Venda / País (%)')
