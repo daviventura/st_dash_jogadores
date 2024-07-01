@@ -85,7 +85,7 @@ st.header('VALOR DE MERCADO MUNDIAL')
 st.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 
-with st.container(height=500):
+with st.container(height=400):
     st.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_container_width=False)
 
 
