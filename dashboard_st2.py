@@ -68,14 +68,6 @@ vm_previsto=[float('{:.1f}'.format(np.exp(lr.predict(df_lr)[i,0]),)) for i in ra
 df_bar_lr=pd.DataFrame({'VM Previsto':vm_previsto},index=paises_destino)
 
 
-# GRÁFICOS
-
-col1.subheader('Valor de Mercado Previsto - Em € Milhões')
-col1.bar_chart(df_bar_lr)
-
-col1.subheader('Probabilidade Venda / País (%)')
-col1.bar_chart(df_bar_sm)
-
 # MAPA
 
 latitude=[40.41678,48.85661,51.50735,41.90278,38.71667,39.93336]
@@ -94,3 +86,11 @@ col1.metric('Maior Valor de Mercado',
             value=str(max(vm_previsto))+' Milhões € - '+maior_vm_pais)
 col1.map(df_map,latitude='Latitude',longitude='Longitude',size='Size')
 
+
+# GRÁFICOS
+
+col1.subheader('Valor de Mercado Previsto - Em € Milhões')
+col1.bar_chart(df_bar_lr)
+
+col1.subheader('Probabilidade Venda / País (%)')
+col1.bar_chart(df_bar_sm)
