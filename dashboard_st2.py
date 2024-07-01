@@ -92,8 +92,7 @@ with col2_2.container(height=300,border=False):
     st.map(df_map,latitude='Latitude',
            longitude='Longitude',
            size='Size',
-           use_container_width=False,
-           height=300)
+           use_container_width=False)
 
 
 # GRÁFICOS
