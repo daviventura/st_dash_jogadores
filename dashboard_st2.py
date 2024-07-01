@@ -10,7 +10,7 @@ st.set_page_config(
     page_title='Mercado Jogadores'
 )
 
-col1_1,col2_2,col3_3=st.columns([0.15,0.45,0.40])
+col1_1,col2_2,col3_3=st.columns([0.15,0.55,0.30])
 col1,col2=st.columns([0.6,0.4])
 
 df=pd.read_excel('datasets/dados_inputs.xlsx')
@@ -92,10 +92,9 @@ col2_2.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_cont
 
 # GRÁFICOS
 
-with col3_3.container(height=200,border=True):
-    st.subheader('Valor de Mercado Previsto - Em € Milhões')
-    st.bar_chart(df_bar_lr)
 
-with col3_3.container(height=200,border=True):
-    st.subheader('Probabilidade Venda / País (%)')
-    st.bar_chart(df_bar_sm)
+col3_3.subheader('Valor de Mercado Previcol3_3o - Em € Milhões')
+col3_3.bar_chart(df_bar_lr)
+
+col3_3.subheader('Probabilidade Venda / País (%)')
+col3_3.bar_chart(df_bar_sm)
