@@ -40,9 +40,9 @@ y=y_lr
 
 # PREVISÕES - PROBABILIDADES
 
-st.sidebar.image('imagens/Logo PNG.png')
-pais_origem=st.sidebar.selectbox('País de Origem',paises_origem)
-idade=st.sidebar.select_slider('Idade',list(range(12,40)))
+col1.image('imagens/Logo PNG.png')
+pais_origem=col1.selectbox('País de Origem',paises_origem)
+idade=col2.select_slider('Idade',list(range(12,40)))
 
 df_sm=pd.DataFrame({i:[0] for i in df.columns[:27]})
 df_sm.loc[0,'Idade']=idade
