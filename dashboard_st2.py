@@ -92,7 +92,7 @@ col2_2.map(df_map,latitude='Latitude',longitude='Longitude',size='Size',use_cont
 
 # GRÁFICOS
 
-with col3_3.container(height=400,border=True):
+with st.container(height=400,border=True):
 
     col3_3.subheader('Valor de Mercado Previsto - Em € Milhões')
     col3_3.bar_chart(df_bar_lr)
